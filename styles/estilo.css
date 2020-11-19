@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(225, 230, 247);
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    
+}
+label{
+    color: rgb(8, 31, 131);  
+}
+h1{
+color: rgb(12, 23, 73);
+}
+h2{
+    width: 50%;
+    color: rgb(8, 31, 131);
+}
+tr.cabecera{
+    background-color: rgb(101, 127, 243);
+    border: rgb(101, 127, 243);
+    height: 40px;
+
+}
+tr.resto{
+    background-color: rgb(192, 202, 243);
+    border: rgb(192, 202, 243);
+}
+table {
+	width: 50%;
+
+}
+div{
+    width: 100%;
+}
+label:hover {
+    color: rgb(255,255,255);
+    background-color: rgb(8, 31, 131);
+    cursor: pointer;
+  }

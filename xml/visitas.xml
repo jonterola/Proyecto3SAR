@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE visitas SYSTEM "libro_visitas.dtd">
+<visitas ult_id="6">
+  <visita id="1">
+    <fecha>11th of November 2020</fecha>
+    <nombre>Ander Gomez</nombre>
+    <comentario>Esto es una pruebafkjofdfojokfdfdhofdfdfdiohjfdohijnfdhiojhfdhioifdhiofdhd fdfddsasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</comentario>
+    <email mostrar="si">ander@gomez.com</email>
+  </visita>
+  <visita id="2">
+    <fecha>11th of November 2020</fecha>
+    <nombre>Ander Gom</nombre>
+    <comentario>Esto es una prueba</comentario>
+    <email mostrar="no">ander@gom.com</email>
+  </visita>
+  <visita id="3">
+    <fecha>12th of November 2020</fecha>
+    <nombre>Adrian Ruiz</nombre>
+    <comentario>soy tonto</comentario>
+    <email mostrar="si">aruiz@ikasle.ehu.eus</email>
+  </visita>
+  <visita id="4">
+    <fecha>12th of November 2020</fecha>
+    <nombre>Adrian Gutierrez</nombre>
+    <comentario>soy tontouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuubn uuuuuuuuuuuuuudsfaudsafuafsduasfuasfuasfuasfuuuuuuuu</comentario>
+    <email mostrar="si">agutierrez@ikasle.ehu.eus</email>
+  </visita>
+  <visita id="5">
+    <fecha>12th of November 2020</fecha>
+    <nombre>Jon Tellechea</nombre>
+    <comentario>cbnnkngfcvjymgb</comentario>
+    <email mostrar="si">manterola@cbcb.listo</email>
+  </visita>
+  <visita id="6">
+    <fecha>19th of November 2020</fecha>
+    <nombre>Urtzi STONKS</nombre>
+    <comentario>Buenas tardes, no se hacer CSS y estoy viendo ofertas en VS y son todas una mierda. Habré llegado ya a 50 caracteres?</comentario>
+    <email mostrar="si">aruiz@ikasle.ehu.eus</email>
+  </visita>
+</visitas>
