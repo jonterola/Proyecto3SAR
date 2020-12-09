@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+    <producto id=1>
+<categoria>accesorio</categoria>
+<nombre>gorroTrueno</nombre>
+<precio>12</precio>
+<stock>50</stock>
+</producto>
+</productos>
