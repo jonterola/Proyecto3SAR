@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE visitas SYSTEM "libro_visitas.dtd">
-<visitas ult_id="6">
+<visitas ult_id="7">
   <visita id="1">
     <fecha>11th of November 2020</fecha>
     <nombre>Ander Gomez</nombre>
@@ -36,5 +36,11 @@
     <nombre>Urtzi STONKS</nombre>
     <comentario>Buenas tardes, no se hacer CSS y estoy viendo ofertas en VS y son todas una mierda. Habré llegado ya a 50 caracteres?</comentario>
     <email mostrar="si">aruiz@ikasle.ehu.eus</email>
+  </visita>
+  <visita id="7">
+    <fecha>9th of December 2020</fecha>
+    <nombre/>
+    <comentario/>
+    <email mostrar="no"/>
   </visita>
 </visitas>
