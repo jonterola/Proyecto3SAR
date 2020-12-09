@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<productos>
-    <producto id=1>
-<categoria>accesorio</categoria>
-<nombre>gorroTrueno</nombre>
-<precio>12</precio>
-<stock>50</stock>
-</producto>
-</productos>
+<productos lastid="2">
+    <producto id="1">
+        <categoria>accesorio</categoria>
+        <genero>hombre</genero>
+        <nombre>gorroTrueno</nombre>
+        <precio>12</precio>
+        <stock>50</stock>
+    </producto>
+<producto id="2"><categoria>Pantalones</categoria><genero>mujer</genero><nombre>Levi's regular jeans</nombre><precio>50</precio><stock>100</stock></producto></productos>
