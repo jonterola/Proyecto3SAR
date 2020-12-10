@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<productos lastid="2">
+<!DOCTYPE productos SYSTEM "productos.dtd">
+<productos lastid="1">
     <producto id="1">
         <categoria>accesorio</categoria>
         <genero>hombre</genero>
         <nombre>gorroTrueno</nombre>
         <precio>12</precio>
         <stock>50</stock>
+        <fecha>2020-12-10</fecha>
     </producto>
-<producto id="2"><categoria>Pantalones</categoria><genero>mujer</genero><nombre>Levi's regular jeans</nombre><precio>50</precio><stock>100</stock></producto></productos>
+</productos>

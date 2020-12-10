@@ -17,6 +17,7 @@ $producto->addChild('genero',$genero);
 $producto->addChild('nombre',$nombre);
 $producto->addChild('precio',$precio);
 $producto->addChild('stock',$stock);
+$producto->addChild('fecha',date('Y-m-d'));
 
 $xml->asXML('../xml/productos.xml');
 ?>
