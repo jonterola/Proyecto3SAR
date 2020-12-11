@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE productos SYSTEM "productos.dtd">
+<productos lastid="1">
+    <producto id="1">
+        <categoria>accesorio</categoria>
+        <genero>hombre</genero>
+        <nombre>gorroTrueno</nombre>
+        <precio>12</precio>
+        <stock>50</stock>
+        <fecha>2020-12-10</fecha>
+    </producto>
+</productos>
