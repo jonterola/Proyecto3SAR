@@ -147,3 +147,27 @@ footer a {
     float: none;
   }
 }
+
+#tabla{
+  margin: 50px;
+}
+table{
+  width: 80%;
+  border-collapse: collapse;
+  background-color: white;
+  text-align: center;
+}
+tr{
+  border-bottom: 1px solid #ddd;
+}
+tr,td{
+  padding: 2%;
+}
+tr:hover td{
+  background-color: #ddd ;
+ 
+}
+thead{
+  color:white;
+  background-color: #333;
+}

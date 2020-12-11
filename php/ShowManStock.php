@@ -26,13 +26,27 @@
 
         <section>
             <h2>
-                ULTIMOS EN ENTRAR AL CATALOGO
+                PRODUCTOS DE HOMBRE
             </h2>
-            <img src="https://footwearnews.com/wp-content/uploads/2019/05/lightning-crocs.jpg" style="width: 900px;">
+            <?php
+            $xml = simplexml_load_file("../xml/productos.xml");
+
+            echo "<div id='tabla'><table>";
+            echo "<thead><tr><th>Nombre</th><th>Precio</th></tr></thead>";
+            foreach($xml->children() as $producto){
+                if($producto->genero == "hombre"){
+                    echo "<tr>";
+                    echo "<td>$producto->nombre</td>";
+                    echo "<td>$producto->precio €</td>";
+                    echo "</tr>";
+                }
+            }
+            echo "</table></div>";
+            ?>
         </section>
 
         <aside>
-            <h4><a href="showStock.php">Todos los productos</a></h4>
+            <h4><a href="showStock.php">Todos los productos<a></h4>
             <h4>Novedades</h4>
             <h4><a href="showManStock.php">Hombre</a></h4>
             <h4><a href="showWomanStock.php">Mujer</a></h4>

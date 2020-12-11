@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE productos SYSTEM "productos.dtd">
-<productos lastid="1">
+<productos lastid="4">
     <producto id="1">
         <categoria>accesorio</categoria>
         <genero>hombre</genero>
@@ -9,4 +9,4 @@
         <stock>50</stock>
         <fecha>2020-12-10</fecha>
     </producto>
-</productos>
+<producto id="2"><categoria>pantalones</categoria><genero>mujer</genero><nombre>pantalon mujer</nombre><precio>52.2</precio><stock>12</stock><fecha>2020-12-11</fecha></producto><producto id="3"><categoria/><genero/><nombre/><precio/><stock/><fecha>2020-12-12</fecha></producto><producto id="4"><categoria>camiseta</categoria><genero>hombre</genero><nombre>Nike PSG</nombre><precio>70</precio><stock>10</stock><fecha>2020-12-12</fecha></producto></productos>
