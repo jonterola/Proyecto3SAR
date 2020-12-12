@@ -8,7 +8,7 @@
 	<section id="s1">
 		<div>
 			
-			<form id='fproduct' name='fproduct' method="POST" action='AddProduct.php'>
+			<form id='fproduct' name='fproduct' method="POST" enctype='multipart/form-data' action='AddProduct.php'>
 			<h2>Añadir producto</h2><br />
 				<table>
 					
@@ -26,6 +26,9 @@
 					</tr>
 					<tr>
 						<td>Stock<sup>*</sup></td><td> <input type="text" size="75" id="stock" name="stock"></td>
+					</tr>
+					<tr>
+						<td>Imagen<sup>*</sup></td><td> <input type="file" size="75" id="imagen" name="imagen"></td>
 					</tr>
 					<tr>
 						<td><input type="submit" id="submit" value="Añadir"> <input type="reset" id="reset" value="Limpiar"></td>

@@ -25,16 +25,17 @@
 
         <section>
             <h2>
-                PRODUCTOS DE HOMBRE
+                PRODUCTOS DE MUJER
             </h2>
             <?php
             $xml = simplexml_load_file("../xml/productos.xml");
 
             echo "<div id='tabla'><table>";
-            echo "<thead><tr><th>Nombre</th><th>Precio</th></tr></thead>";
+            echo "<thead><tr><th></th><th>Nombre</th><th>Precio</th></tr></thead>";
             foreach($xml->children() as $producto){
                 if($producto->genero == "mujer"){
                     echo "<tr>";
+                    echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, ".$producto->imagen."\" alt=\"Sin imagen relacionada\"/></td>";
                     echo "<td>$producto->nombre</td>";
                     echo "<td>$producto->precio €</td>";
                     echo "</tr>";
