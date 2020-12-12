@@ -13,7 +13,7 @@
 
 
         <header>
-            <h1>TIENDA DE ROPA DEL TEAM GARDFOLD</h1>
+            <h1><a href="layout.php">TIENDA DE ROPA DEL TEAM GARDFOLD</a></h1>
         </header>
 
 

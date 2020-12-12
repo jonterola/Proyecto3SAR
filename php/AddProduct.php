@@ -8,7 +8,6 @@ if(isset($_REQUEST['categoria'])){
 
     $imagen = "";
     if($_FILES!=null){
-        echo "<script>alert('hola');</script>";
         $imagen = $_FILES['imagen']['tmp_name'];
     }
     if ($imagen != "" ) { 

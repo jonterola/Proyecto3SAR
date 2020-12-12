@@ -13,7 +13,7 @@
 
 
         <header>
-            <h1>TIENDA DE ROPA DEL TEAM GARDFOLD</h1>
+            <h1><a href="layout.php">TIENDA DE ROPA DEL TEAM GARDFOLD</a></h1>
         </header>
 
 
@@ -28,7 +28,15 @@
             <h2>
                 ULTIMOS EN ENTRAR AL CATALOGO
             </h2>
-            <img src="https://footwearnews.com/wp-content/uploads/2019/05/lightning-crocs.jpg" style="width: 900px;">
+            <?php
+                $xml = simplexml_load_file("../xml/productos.xml");
+
+                $imagen = $xml->xpath("/productos/producto[last()]/imagen");
+                $nombre = $xml->xpath("/productos/producto[last()]/nombre"); 
+                $precio = $xml->xpath("/productos/producto[last()]/precio");               
+                echo "<img width=\"450\" height=\"450\" src=\"data:image/*;base64, ".$imagen[0]."\" alt=\"Sin imagen relacionada\"/>";              
+                echo "<h3><pre>                 ".$nombre[0]."      ".$precio[0]."€</pre></h3>";
+            ?>
         </section>
 
         <aside>
