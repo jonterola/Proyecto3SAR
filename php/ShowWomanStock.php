@@ -30,10 +30,12 @@
             <?php
             $xml = simplexml_load_file("../xml/productos.xml");
 
+            $cont = 0;
             echo "<div id='tabla'><table>";
             echo "<thead><tr><th></th><th>Nombre</th><th>Precio</th></tr></thead>";
             foreach($xml->children() as $producto){
                 if($producto->genero == "mujer"){
+                    $cont++;
                     echo "<tr>";
                     echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, ".$producto->imagen."\" alt=\"Sin imagen relacionada\"/></td>";
                     echo "<td>$producto->nombre</td>";
@@ -42,6 +44,7 @@
                 }
             }
             echo "</table></div>";
+            echo("<span>$cont productos en total</span>");
             ?>
         </section>
 
