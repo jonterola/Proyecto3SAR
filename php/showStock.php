@@ -44,7 +44,7 @@
                         <tr>
                             <td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, ".$producto->imagen."\" alt=\"Sin imagen relacionada\"/></td>
                             <td> $producto->nombre </td>
-                            <td> $producto->precio </td>
+                            <td> $producto->precio €</td>
                         </tr> 
                 ");
                 $cont++;

@@ -19,14 +19,14 @@
 
         <nav>
             <ul>
-                <li><a href="#">Iniciar sesion</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
                 <li><a href="#">Registrarse</a></li>
             </ul>
         </nav>
 
         <section>
             <h2>
-                ULTIMOS EN ENTRAR AL CATALOGO
+                ÚLTIMOS EN ENTRAR AL CATÁLOGO
             </h2>
             <?php
                 $xml = simplexml_load_file("../xml/productos.xml");
