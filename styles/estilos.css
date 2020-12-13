@@ -88,86 +88,30 @@ footer {
 footer a {
   color: #fff;
 }
-
-/* pantalla maximo 980px */
-@media screen and (max-width: 980px) {
-  .container {
-    width: 98%;
-  }
-  section {
-    width: 68%;
-  }
+.menu a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
-
-/* pantalla maximo 700px */
-@media screen and (max-width: 700px) {
-  aside,
-  section {
-    float: none;
-    width: 96%;
-    font-size: 1.2em;
-  }
-  nav,
-  section {
-    font-size: 1.2em;
-  }
-  aside {
-    margin-top: 5px;
-    background: #333;
-    color: #fff;
-  }
-  nav ul {
-    float: none;
-    clear: both;
-  }
-}
-
-/* pantalla maximo 480px */
-@media screen and (max-width: 480px) {
-  aside {
-    display: block;
-    background: #333;
-    color: #fff;
-    font-size: 1.5em;
-  }
-  nav,
-  section {
-    font-size: 1.5em;
-  }
-  section {
-    width: 94%;
-  }
-  nav ul {
-    display: table;
-    text-align: center;
-    float: none;
-    width: 100%;
-  }
-  nav ul li {
-    float: none;
-  }
-}
-
-#tabla{
+#tabla {
   margin: 50px;
 }
-table{
+table {
   width: 80%;
   border-collapse: collapse;
   background-color: white;
   text-align: center;
 }
-tr{
+tr {
   border-bottom: 1px solid #ddd;
 }
-tr,td{
+tr,
+td {
   padding: 2%;
 }
-tr:hover td{
-  background-color: #ddd ;
- 
+tr:hover td {
+  background-color: #ddd;
 }
-thead{
-  color:white;
+thead {
+  color: white;
   background-color: #333;
 }
