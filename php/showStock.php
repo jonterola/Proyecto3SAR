@@ -6,18 +6,19 @@ include '../html/Header.html';
 include '../php/Menu.php';
 ?>
 <section>
-    <h2>
+    <!-- <h2>
         TODOS LOS PRODUCTOS <?php if (isset($_REQUEST['genero'])) {
                                 echo " DE " . strtoupper($_REQUEST['genero']);
                             } ?>
-    </h2>
+    </h2> -->
     <?php
     $xml = simplexml_load_file("../xml/productos.xml");
 
     $cont = 0;
     echo "<div id='tabla'><table>";
-    echo "<thead><tr><th></th><th>Nombre</th><th>Precio</th></tr></thead>";
+    //echo "<thead><tr><th></th><th>Nombre</th><th>Precio</th></tr></thead>";
     if (isset($_REQUEST['genero'])) {
+        echo "<thead><tr><th> Productos de " . $_REQUEST['genero'] . " </th><th>Nombre</th><th>Precio</th></tr></thead>";
         foreach ($xml->children() as $producto) {
             if ($producto->genero == $_REQUEST['genero']) {
                 $cont++;
@@ -34,6 +35,8 @@ include '../php/Menu.php';
             }
         }
     } else if (isset($_REQUEST['novedad'])) {
+        echo "<thead><tr><th> Novedades  </th><th>Nombre</th><th>Precio</th></tr></thead>";
+
         foreach ($xml->children() as $producto) {
             if (strtotime($producto->fecha) >= strtotime("-1 week")) {
                 $cont++;
@@ -50,6 +53,8 @@ include '../php/Menu.php';
             }
         }
     } else if (isset($_REQUEST['oferta'])) {
+        echo "<thead><tr><th> Ofertas </th><th>Nombre</th><th>Precio</th></tr></thead>";
+
         foreach ($xml->children() as $producto) {
             if ($producto->oferta != 0) {
                 $cont++;
@@ -66,6 +71,7 @@ include '../php/Menu.php';
             }
         }
     } else {
+        echo "<thead><tr><th> Todos los productos </th><th>Nombre</th><th>Precio</th></tr></thead>";
         foreach ($xml->producto as $producto) {
             echo "<tr>";
             echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" alt=\"Sin imagen relacionada\"/></td>";
