@@ -1,11 +1,12 @@
 <!ELEMENT productos (producto)>
-<!ELEMENT producto (categoria,genero,nombre,precio,stock,fecha,imagen)>
+<!ELEMENT producto (categoria,genero,nombre,precio,stock,fecha,oferta,imagen)>
 <!ELEMENT categoria (#PCDATA)>
 <!ELEMENT genero (#PCDATA)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT precio (#PCDATA)>
 <!ELEMENT stock (#PCDATA)>
 <!ELEMENT fecha (#PCDATA)>
+<!ELEMENT oferta (#PCDATA)>
 <!ELEMENT imagen (#PCDATA)>
 <!ATTLIST productos type CDATA "lastid">
 <!ATTLIST producto type CDATA "id">
