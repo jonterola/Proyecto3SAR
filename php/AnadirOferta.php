@@ -29,7 +29,7 @@ include '../php/Menu.php';
                     </tr>
                 </table>
             </form>
-            <span style="margin:auto; display:table; color:red;" id="error"></span>
+            
         </div>
 
 

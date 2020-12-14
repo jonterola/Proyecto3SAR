@@ -11,7 +11,7 @@ include '../php/Menu.php';
 	<section id="s1">
 		<div>
 
-			<form id='fproduct' name='fproduct' method="POST" enctype='multipart/form-data' action=''>
+			<form id='fproduct' name='fproduct' method="POST" enctype='multipart/form-data' onsubmit="return validarProducto()" action=''>
 				<h2>Añadir producto</h2><br />
 				<table>
 
@@ -48,6 +48,7 @@ include '../php/Menu.php';
 					</tr>
 				</table>
 			</form>
+			<span id="error" name="error" style="margin:auto; display:table; color:red;"></span><br><br>
 
 		</div>
 

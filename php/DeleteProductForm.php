@@ -17,7 +17,7 @@ include '../php/Menu.php';
 
                     <tr>
                         <td>Código de producto:</td>
-                        <td> <input type="text" size="50" id="codigo" name="codigo"></td>
+                        <td> <input type="text" size="50" id="codigo" name="codigo" required></td>
                     </tr>
                     <tr>
                         <td><input type="submit" id="submit" value="Eliminar"> <input type="reset" id="reset" value="Limpiar"></td>
