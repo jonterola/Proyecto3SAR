@@ -21,7 +21,7 @@ include '../php/Menu.php';
 				</tr>
 				<tr>
 					<td>Género:</td>
-					<td> <select style="width:206px" id="genero" name="genero">
+					<td> <select style="width:206px;font-size:large;" id="genero" name="genero">
 
 							<option>hombre</option>
 							<option>mujer</option>

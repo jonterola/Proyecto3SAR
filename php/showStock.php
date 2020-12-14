@@ -50,7 +50,7 @@ include '../php/Menu.php';
                 if ($precio == $producto->precio) {
                     echo "<td> $precio €";
                 } else {
-                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>   ";
+                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span> <span>$precio €</span>   ";
                 }
                 echo "<a href='#' onClick='add(" . $producto['id'] . ")'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
             }
