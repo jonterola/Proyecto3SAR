@@ -19,6 +19,7 @@ include '../php/Menu.php';
     $cont = 0;
     echo "<div class='showTable'><table>";
     //echo "<thead><tr><th></th><th>Nombre</th><th>Precio</th></tr></thead>";
+
     if (isset($_REQUEST['genero'])) {
         echo "<thead><tr><th> Productos de " . $_REQUEST['genero'] . " </th><th>Nombre</th><th>Precio</th></tr></thead>";
         foreach ($xml->children() as $producto) {
@@ -29,11 +30,11 @@ include '../php/Menu.php';
                 echo "<td>$producto->nombre</td>";
                 $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
                 if ($precio == $producto->precio) {
-                    echo "<td> $precio €</td>";
+                    echo "<td> $precio € ";
                 } else {
-                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span >$precio €</span> </td>";
+                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span >$precio €</span> ";
                 }
-                echo "</tr>";
+                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
             }
         }
     } else if (isset($_REQUEST['novedad'])) {
@@ -47,11 +48,11 @@ include '../php/Menu.php';
                 echo "<td>$producto->nombre</td>";
                 $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
                 if ($precio == $producto->precio) {
-                    echo "<td> $precio €</td>";
+                    echo "<td> $precio €";
                 } else {
-                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span> </td>";
+                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>   ";
                 }
-                echo "</tr>";
+                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
             }
         }
     } else if (isset($_REQUEST['oferta'])) {
@@ -65,27 +66,27 @@ include '../php/Menu.php';
                 echo "<td>$producto->nombre</td>";
                 $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
                 if ($precio == $producto->precio) {
-                    echo "<td> $precio €</td>";
+                    echo "<td> $precio €";
                 } else {
-                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span> </td>";
+                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span>  ";
                 }
-                echo "</tr>";
+                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
             }
         }
     } else {
         echo "<thead><tr><th> Todos los productos </th><th>Nombre</th><th>Precio</th></tr></thead>";
         foreach ($xml->producto as $producto) {
-            if($producto->stock > 0){
+            if ($producto->stock > 0) {
                 echo "<tr>";
                 echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" onerror=\"this.src='../uploads/NoImage.jpg'\"/></td>";
                 echo "<td>$producto->nombre</td>";
                 $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
                 if ($precio == $producto->precio) {
-                    echo "<td> $precio €</td>";
+                    echo "<td> $precio €";
                 } else {
-                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span> </td>";
+                    echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span> ";
                 }
-                echo "</tr>";
+                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
                 $cont++;
             }
         }

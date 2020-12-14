@@ -48,7 +48,7 @@ nav {
   margin-bottom: 0.5%;
 }
 
-nav span {
+.nav__span {
   padding: 3px 10px;
   margin: 2px;
   background: #fafafa;
@@ -57,17 +57,33 @@ nav span {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-nav .left {
+.nav__spanleft {
+  padding: 3px 10px;
+  margin: 2px;
+  background: #fafafa;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
   float: left !important;
 }
-nav .right {
+.nav__spanright {
+  padding: 3px 10px;
+  margin: 2px;
+  background: #fafafa;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
   float: right !important;
 }
 
-nav span:hover {
+.nav__spanleft:hover,
+.nav__spanright:hover {
   background-color: #ccc;
   text-decoration: underline;
 }
+
 nav a {
   display: block;
   text-align: center;
