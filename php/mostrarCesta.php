@@ -20,9 +20,12 @@ if (isset($_SESSION['cesta']) && count($_SESSION['cesta']) > 0) {
         }
         if ($producto->check(0))
             echo "</td> <td> $producto->unidades <img src='../uploads/mas.png' onclick='addfrom(" . $producto->id . ")'><img src='../uploads/menos.png' onclick='less(" . $producto->id . ")'><img src='../uploads/borrar.png' onclick='del(" . $producto->id . ")'></td> </tr>";
+        else
+            echo "</td> <td> No hay suficiente stock para este articulo <img src='../uploads/borrar.png' onclick='del(" . $producto->id . ")'></td> </tr>";
     }
     echo "</table></div>";
     echo ("<span>$cont productos en total</span>");
-    echo '<br><input type="button" value="Comprar" class="boton">';
+    echo '<br><input type="button" onclick="location.href=\'RealizarCompra.php\';" value="Comprar" class="boton">';
+    
 } else
     echo "<h2>No hay productos en la cesta<h2>";

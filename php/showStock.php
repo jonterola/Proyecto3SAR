@@ -23,7 +23,7 @@ include '../php/Menu.php';
     if (isset($_REQUEST['genero'])) {
         echo "<thead><tr><th> Productos de " . $_REQUEST['genero'] . " </th><th>Nombre</th><th>Precio</th></tr></thead>";
         foreach ($xml->children() as $producto) {
-            if ($producto->genero == $_REQUEST['genero'] && $producto->stock > 0) {
+            if (($producto->genero == $_REQUEST['genero'] || $producto->genero == "unisex") && $producto->stock > 0) {
                 $cont++;
                 echo "<tr>";
                 echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" onerror=\"this.src='../uploads/NoImage.jpg'\"/></td>";

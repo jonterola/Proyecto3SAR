@@ -24,7 +24,7 @@
         echo '<span  class = "nav__spanright style = "float:right"><a href="logout.php">Logout</a></span>';
         if ($_SESSION['tipo'] == 'A') {
             echo '<span class = "nav__spanleft style ="float:center"><a href="AddProductForm.php">Añadir Producto</a></span>';
-            echo '<span class = "nav__spanleft"><a href="anadiroferta.php">Añadir Oferta</a></span>';
+            echo '<span class = "nav__spanleft"><a href="AnadirOferta.php">Añadir Oferta</a></span>';
             echo '<span class = "nav__spanleft"><a href="DeleteProductForm.php">Eliminar Producto</a></span>';
         }
     }
