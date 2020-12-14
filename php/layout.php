@@ -1,3 +1,4 @@
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <?php if (!isset($_SESSION))
     session_start(); ?>
 <!DOCTYPE html>
@@ -18,7 +19,7 @@ include '../php/Menu.php';
     $imagen = $xml->xpath("/productos/producto[last()]/imagen");
     $nombre = $xml->xpath("/productos/producto[last()]/nombre");
     $precio = $xml->xpath("/productos/producto[last()]/precio");
-    echo "<img width=\"450\" height=\"450\" src=\"data:image/*;base64, " . $imagen[0] . "\" alt=\"Sin imagen relacionada\"/>";
+    echo "<img width=\"450\" height=\"450\" src=\"data:image/*;base64, " . $imagen[0] . "\" onerror=\"this.src='../uploads/NoImage.jpg'\"/>";
     echo "<h3><pre>                 " . $nombre[0] . "      " . $precio[0] . "€</pre></h3>";
     ?>
 </section>
