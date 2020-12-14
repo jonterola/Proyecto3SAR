@@ -17,7 +17,7 @@
         echo "<label style='color:white;text-align:left'>Bienvenido " . $_SESSION['name'] . " </label> ";
         echo ' <img src="';
         echo $foto;
-        echo '" style="max-width:60px;width:100%;max-height:60px;height:100%"></img> <span> </span> ';
+        echo '" style="max-width:60px;width:100%;max-height:60px;height:100%"></img> ';
         if ($_SESSION['tipo'] == 'A') {
             echo '<span class = "left"><a href="AddProductForm.php">Añadir Producto</a></span>';
             echo '<span class = "left"><a href="DeleteProductForm.php">Eliminar Producto</a></span>';

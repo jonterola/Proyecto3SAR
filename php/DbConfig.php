@@ -3,5 +3,6 @@ $server = "localhost";
 $user = "root";
 $pass = "";
 $basededatos = "storesar";
-$target_dir = "/xampp/htdocs/SAR/PROYECTO3SAR/";
+$target_dir = getcwd() . "/../";
 $url = "http://localhost/";
+
