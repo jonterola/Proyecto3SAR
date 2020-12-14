@@ -1,3 +1,7 @@
+<?php
+include 'ProductoCesta.php';
+if (!isset($_SESSION))
+    session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,9 +12,6 @@ include '../php/Menu.php';
 
 <section id="show">
     <?php
-    include 'ProductoCesta.php';
-    if (!isset($_SESSION))
-        session_start();
     if (isset($_SESSION['cesta']) && count($_SESSION['cesta']) > 0) {
         $xml = simplexml_load_file("../xml/productos.xml");
         foreach ($_SESSION['cesta'] as $productoCesta) {
@@ -24,6 +25,7 @@ include '../php/Menu.php';
             }
         }
         $xml->asXML('../xml/productos.xml');
+        $_SESSION['cesta'] = array();
         echo
             '<h2 style="text-align: center;">Compra realizada con exito! Pulse <a href="layout.php">aqui</a> para ir atras.<h2><br> <img src="https://media.giphy.com/media/YnkMcHgNIMW4Yfmjxr/giphy.gif" style="display: block;margin-left: auto;margin-right: auto;">;';
     } else
