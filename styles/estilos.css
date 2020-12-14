@@ -48,6 +48,7 @@ nav {
   margin-bottom: 0.5%;
   display: flex;
   align-items: center;
+  height: 50px;
 }
 
 .nav__span {
@@ -81,8 +82,7 @@ nav {
   line-height: 34px;
 }
 
-.nav__spanleft:hover,
-.nav__spanright:hover {
+.nav__spanleft:hover {
   background-color: #ccc;
   text-decoration: underline;
 }

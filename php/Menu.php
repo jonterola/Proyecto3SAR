@@ -18,8 +18,8 @@
         echo ' <img src="';
         echo $foto;
         echo '" style="float:left;max-width:60px;width:100%;max-height:60px;height:100%"></img> ';
+        echo '<pre>                                     </pre>';
 
-        echo "<a href='#' onClick='________();'><img  style= 'width:7.6%;float:right;padding-right:12px'  src ='../uploads/vercarrito.png' /></a>";
 
         if ($_SESSION['tipo'] == 'A') {
             echo '<span class = "nav__spanleft"><a href="AddProductForm.php">Añadir Producto</a></span>';
@@ -27,8 +27,8 @@
             echo '<span class = "nav__spanleft"><a href="DeleteProductForm.php">Eliminar Producto</a></span>';
         }
 
-
-        echo '<span  class = "nav__spanright style = "float:right"><a href="logout.php">Logout</a></span>';
+        echo "<a href='#' style='box-sizing:content-box' onClick='________();'><img  style= 'width:7.6%; float:right ;padding-right:12px;padding:5px'  src ='../uploads/vercarrito.png' /></a>";
+        echo '<span  class = "nav__spanright ><a href="logout.php">Logout</a></span>';
     }
     ?>
 
