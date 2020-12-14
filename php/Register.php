@@ -26,15 +26,15 @@ include '../php/Menu.php';
                 </tr>
                 <tr>
                     <td><label id="lpassword">Contraseña*: </label></td>
-                    <td><input type="password" id="password" name="password" required></td>
+                    <td><input type="password" id="password" name="password" minlength="6" required></td>
                 </tr>
                 <tr>
                     <td><label id="lpassword2">Repetir Contraseña*: </label></td>
-                    <td><input type="password" id="password2" name="password2" required></td>
+                    <td><input type="password" id="password2" name="password2" minlength="6" required></td>
                 </tr>
                 <tr>
                     <td><label id="lfile">Avatar: </label></td>
-                    <td><input type="file" id="archivosubido" name="archivosubido" accept="image/*" onchange="preview()"></td>
+                    <td><input type="file" id="archivosubido" name="archivosubido" accept="image/*"></td>
                 </tr>
             </table>
 
