@@ -35,6 +35,10 @@ include '../php/Menu.php';
 						<td> <input type="text" size="75" id="precio" name="precio"></td>
 					</tr>
 					<tr>
+						<td>Oferta:</td>
+						<td> <input type="text" size="5" id="oferta" name="oferta">%</td>
+					</tr>
+					<tr>
 						<td>Stock:</td>
 						<td> <input type="text" size="75" id="stock" name="stock"></td>
 					</tr>
@@ -56,6 +60,7 @@ include '../php/Menu.php';
 			$genero = $_REQUEST['genero'];
 			$nombre = $_REQUEST['nombreProducto'];
 			$precio = $_REQUEST['precio'];
+			$oferta = $_REQUEST['oferta'];
 			$stock = $_REQUEST['stock'];
 
 			$imagen = "";
@@ -78,6 +83,8 @@ include '../php/Menu.php';
 			$producto->addChild('precio', $precio);
 			$producto->addChild('stock', $stock);
 			$producto->addChild('fecha', date('Y-m-d'));
+			$producto->addChild('oferta', $oferta);
+			
 			if ($imagen != "") {
 				$producto->addChild('imagen', $imagen_b64);
 			}
