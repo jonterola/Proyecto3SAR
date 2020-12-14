@@ -18,9 +18,11 @@ if (isset($_SESSION['cesta']) && count($_SESSION['cesta']) > 0) {
         } else {
             echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span> ";
         }
-        echo "</td> <td> $producto->unidades <img src='../uploads/mas.png' onclick='addfrom(" . $producto->id . ")'><img src='../uploads/menos.png' onclick='less(" . $producto->id . ")'><img src='../uploads/borrar.png' onclick='del(" . $producto->id . ")'></td> </tr>";
+        if ($producto->check(0))
+            echo "</td> <td> $producto->unidades <img src='../uploads/mas.png' onclick='addfrom(" . $producto->id . ")'><img src='../uploads/menos.png' onclick='less(" . $producto->id . ")'><img src='../uploads/borrar.png' onclick='del(" . $producto->id . ")'></td> </tr>";
     }
     echo "</table></div>";
     echo ("<span>$cont productos en total</span>");
+    echo '<br><input type="button" value="Comprar" class="boton">';
 } else
     echo "<h2>No hay productos en la cesta<h2>";
