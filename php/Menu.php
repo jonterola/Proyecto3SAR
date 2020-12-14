@@ -1,31 +1,31 @@
 <nav>
-    <ul>
-        <?php
-        if (!isset($_SESSION['email'])) {
-            echo '        <li><a href="LogIn.php">Iniciar sesión</a></li>
-        <li><a href="Register.php">Registrarse</a></li>';
-        } else {
-            include 'DbConfig.php';
-            $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
-            if (!$mysqli) {
-                echo ('MAL');
-                die('Fallo al conectar a MySQL: ' . mysqli_connect_error());
-            }
-            $foto = "../uploads/nophoto.jpg";
-            if (isset($_SESSION['foto']))
-                $foto = "../uploads/" . $_SESSION['foto'];
-            echo "<label style='color:white;text-align:left'>Bienvenido " . $_SESSION['name'] . " </label> ";
-            echo ' <img src="';
-            echo $foto;
-            echo '" style="max-width:60px;width:100%;max-height:60px;height:100%"></img> <span> </span> ';
-            if ($_SESSION['tipo'] == 'A') {
-                echo '<li><a href="AddProductForm.php">Añadir Producto</a></li>';
-                echo '<li><a href="DeleteProductForm.php">Eliminar Producto</a></li>';
-            }
-            echo '<li><a href="logout.php">Logout</a></li>';
+
+    <?php
+    if (!isset($_SESSION['email'])) {
+        echo '        <span class = "right"><a href="LogIn.php">Iniciar sesión</a></span>
+        <span class = "right"> <a href="Register.php">Registrarse</a></span>';
+    } else {
+        include 'DbConfig.php';
+        $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
+        if (!$mysqli) {
+            echo ('MAL');
+            die('Fallo al conectar a MySQL: ' . mysqli_connect_error());
         }
-        ?>
-    </ul>
+        $foto = "../uploads/nophoto.jpg";
+        if (isset($_SESSION['foto']))
+            $foto = "../uploads/" . $_SESSION['foto'];
+        echo "<label style='color:white;text-align:left'>Bienvenido " . $_SESSION['name'] . " </label> ";
+        echo ' <img src="';
+        echo $foto;
+        echo '" style="max-width:60px;width:100%;max-height:60px;height:100%"></img> <span> </span> ';
+        if ($_SESSION['tipo'] == 'A') {
+            echo '<span class = "left"><a href="AddProductForm.php">Añadir Producto</a></span>';
+            echo '<span class = "left"><a href="DeleteProductForm.php">Eliminar Producto</a></span>';
+        }
+        echo '<span class = "right"><a href="logout.php">Logout</a></li>';
+    }
+    ?>
+
 </nav>
 
 <aside>

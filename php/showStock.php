@@ -7,7 +7,7 @@
 include '../html/Header.html';
 include '../php/Menu.php';
 ?>
-<section>
+<section id="show">
     <!-- <h2>
         TODOS LOS PRODUCTOS <?php if (isset($_REQUEST['genero'])) {
                                 echo " DE " . strtoupper($_REQUEST['genero']);
@@ -17,7 +17,7 @@ include '../php/Menu.php';
     $xml = simplexml_load_file("../xml/productos.xml");
 
     $cont = 0;
-    echo "<div id='tabla'><table>";
+    echo "<div class='showTable'><table>";
     //echo "<thead><tr><th></th><th>Nombre</th><th>Precio</th></tr></thead>";
     if (isset($_REQUEST['genero'])) {
         echo "<thead><tr><th> Productos de " . $_REQUEST['genero'] . " </th><th>Nombre</th><th>Precio</th></tr></thead>";
