@@ -1,3 +1,5 @@
+<?php if (!isset($_SESSION))
+    session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,7 +25,7 @@ include '../php/Menu.php';
             if ($producto->genero == $_REQUEST['genero']) {
                 $cont++;
                 echo "<tr>";
-                echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" alt=\"Sin imagen relacionada\"/></td>";
+                echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" onerror=\"this.src='../uploads/NoImage.jpg'\"/></td>";
                 echo "<td>$producto->nombre</td>";
                 $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
                 if ($precio == $producto->precio) {
@@ -41,7 +43,7 @@ include '../php/Menu.php';
             if (strtotime($producto->fecha) >= strtotime("-1 week")) {
                 $cont++;
                 echo "<tr>";
-                echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" alt=\"Sin imagen relacionada\"/></td>";
+                echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" onerror=\"this.src='../uploads/NoImage.jpg'\"/></td>";
                 echo "<td>$producto->nombre</td>";
                 $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
                 if ($precio == $producto->precio) {
@@ -59,7 +61,7 @@ include '../php/Menu.php';
             if ($producto->oferta != 0) {
                 $cont++;
                 echo "<tr>";
-                echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" alt=\"Sin imagen relacionada\"/></td>";
+                echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" onerror=\"this.src='../uploads/NoImage.jpg'\"/></td>";
                 echo "<td>$producto->nombre</td>";
                 $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
                 if ($precio == $producto->precio) {
@@ -74,7 +76,7 @@ include '../php/Menu.php';
         echo "<thead><tr><th> Todos los productos </th><th>Nombre</th><th>Precio</th></tr></thead>";
         foreach ($xml->producto as $producto) {
             echo "<tr>";
-            echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" alt=\"Sin imagen relacionada\"/></td>";
+            echo "<td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, " . $producto->imagen . "\" onerror=\"this.src='../uploads/NoImage.jpg'\"/></td>";
             echo "<td>$producto->nombre</td>";
             $precio = $producto->precio - $producto->precio * $producto->oferta / 100;
             if ($precio == $producto->precio) {
