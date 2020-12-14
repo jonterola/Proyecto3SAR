@@ -84,6 +84,11 @@ include '../php/Menu.php';
 </section>
 
 <?php include '../html/Footer.html'; ?>
-
+<script>
+    showCart();
+    setInterval(function() {
+        showCart();
+    }, 5000);
+</script>
 
 </html>

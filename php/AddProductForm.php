@@ -21,7 +21,13 @@ include '../php/Menu.php';
 				</tr>
 				<tr>
 					<td>Género:</td>
-					<td> <input type="text" style="width:200px" size="50" id="genero" name="genero" required></td>
+					<td> <select style="width:206px" id="genero" name="genero">
+
+							<option>hombre</option>
+							<option>mujer</option>
+							<option selected>unisex</option>
+
+						</select></td>
 				</tr>
 				<tr>
 					<td>Nombre del producto:</td>
@@ -29,15 +35,15 @@ include '../php/Menu.php';
 				</tr>
 				<tr>
 					<td>Precio:</td>
-					<td> <input type="text" style="width:200px" size="75" id="precio" name="precio" required></td>
+					<td> <input type="number" style="width:200px" size="75" id="precio" name="precio" required></td>
 				</tr>
 				<tr>
 					<td>Oferta:</td>
-					<td> <input type="text" style="width:100px" size="5" id="oferta" name="oferta" required>%</td>
+					<td> <input type="number" style="width:100px" size="5" id="oferta" name="oferta" required>%</td>
 				</tr>
 				<tr>
 					<td>Stock:</td>
-					<td> <input type="text" style="width:100px" size="75" id="stock" name="stock" required></td>
+					<td> <input type="number" style="width:100px" size="75" id="stock" name="stock" required></td>
 				</tr>
 				<tr>
 					<td>Imagen:</td>

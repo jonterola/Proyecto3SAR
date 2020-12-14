@@ -20,6 +20,40 @@ function showCart() {
         }
     });
 }
-setInterval(function () {
-    showCart();
-}, 5000);
+function addfrom(i) {
+    $.ajax({
+        type: "GET",
+        url: "Cesta.php",
+        data: { add: i },
+        success: function (response) {
+            if (response.split(":")[0] == "ERROR") alert(response);
+            showCart();
+        }
+    });
+
+}
+function less(i) {
+    $.ajax({
+        type: "GET",
+        url: "Cesta.php",
+        data: { less: i },
+        success: function (response) {
+            if (response != "OK") alert(response);
+            showCart();
+        }
+    });
+
+}
+
+function del(i) {
+    $.ajax({
+        type: "GET",
+        url: "Cesta.php",
+        data: { del: i },
+        success: function (response) {
+            if (response != "OK") alert(response);
+            showCart();
+        }
+    });
+
+}

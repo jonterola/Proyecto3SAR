@@ -18,7 +18,7 @@ if (isset($_SESSION['cesta']) && count($_SESSION['cesta']) > 0) {
         } else {
             echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span> ";
         }
-        echo "</td> <td> $producto->unidades <a onclick=''></td> </tr>";
+        echo "</td> <td> $producto->unidades <img src='../uploads/mas.png' onclick='addfrom(" . $producto->id . ")'><img src='../uploads/menos.png' onclick='less(" . $producto->id . ")'><img src='../uploads/borrar.png' onclick='del(" . $producto->id . ")'></td> </tr>";
     }
     echo "</table></div>";
     echo ("<span>$cont productos en total</span>");

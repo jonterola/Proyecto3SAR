@@ -18,18 +18,18 @@ include '../php/Menu.php';
 
                     <tr>
                         <td>Código de producto:</td>
-                        <td> <input type="text" size="50"  style ="width:200px" id="codigo" name="codigo" required></td>
+                        <td> <input type="text" size="50" style="width:200px" id="codigo" name="codigo" required></td>
                     </tr>
                     <tr>
                         <td>Descuento:</td>
-                        <td> <input type="text" size="5" id="oferta"  style ="width:100px "name="oferta" pattern="[0-9]{1,2}" title="El descuento debe ser un valor entre 0 y 99" required>%</td>
+                        <td> <input type="number" size="5" id="oferta" style="width:100px " name="oferta" pattern="[0-9]{1,2}" title="El descuento debe ser un valor entre 0 y 99" required>%</td>
                     </tr>
                     <tr>
-                        <td><input type="submit" id="submit" class ="boton" value="Añadir oferta"> <input type="reset" id="reset" class ="boton" value="Limpiar"></td>
+                        <td><input type="submit" id="submit" class="boton" value="Añadir oferta"> <input type="reset" id="reset" class="boton" value="Limpiar"></td>
                     </tr>
                 </table>
             </form>
-            
+
         </div>
 
 
