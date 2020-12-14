@@ -12,24 +12,22 @@ include '../php/Menu.php';
 
 <section>
     <form id='login' name='flogin' method="POST" action='LogIn.php'>
-        <div>
+        <div style="text-align:center">
             <?php if (isset($_SESSION['email']))
-                die('Ya estas logeado'); ?>
-            <table id="tform" style="margin: auto; height: 40%">
+                die('Ya estas logeado'); ?> <table class="tform">
                 <tr>
-                    <td align="left"><label id="luser">Email*: </label></td>
+                    <td><label id="luser">Email*: </label></td>
                     <td><input type="text" id="user" name="user"></td>
                 </tr>
                 <tr>
-                    <td align="left"><label id="lpassword">Contraseña*: </label></td>
+                    <td><label id="lpassword">Contraseña*: </label></td>
                     <td><input type="password" id="password" name="password"></td>
                 </tr>
             </table>
-
+            <br>
+            <input type="submit" value="Iniciar Sesion" class="boton"><br><br>
+            <h4 class='remember' style="font-size: 20px;"><a href="RecuperarPassword.php">Se me ha olvidado la contraseña</a></h4><br>
         </div>
-        <a href="RecuperarPassword.php">Se me ha olvidado la contraseña</a><br>
-        <input type="submit" value="Iniciar Sesion"><br><br>
-
     </form>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <?php

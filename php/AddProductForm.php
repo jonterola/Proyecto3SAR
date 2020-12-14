@@ -3,40 +3,41 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-</head>
+
 <?php
 include '../html/Header.html';
 include '../php/Menu.php';
 ?>
-
-<body>
 	<section id="s1">
 		<div>
 
-			<form id='fproduct' name='fproduct' method="POST" enctype='multipart/form-data' action=''>
+			<form id='fproduct' name='fproduct' method="POST" enctype='multipart/form-data' onsubmit="return validarProducto()" action=''>
 				<h2>Añadir producto</h2><br />
 				<table>
 
 					<tr>
 						<td>Categoría:</td>
-						<td> <input type="text" size="50" id="categoria" name="categoria"></td>
+						<td> <input type="text" size="50" id="categoria" name="categoria" required></td>
 					</tr>
 					<tr>
 						<td>Género:</td>
-						<td> <input type="text" size="50" id="genero" name="genero"></td>
+						<td> <input type="text" size="50" id="genero" name="genero" required></td>
 					</tr>
 					<tr>
 						<td>Nombre del producto:</td>
-						<td> <input type="text" size="50" id="nombreProducto" name="nombreProducto"></td>
+						<td> <input type="text" size="50" id="nombreProducto" name="nombreProducto" required></td>
 					</tr>
 					<tr>
 						<td>Precio:</td>
-						<td> <input type="text" size="75" id="precio" name="precio"></td>
+						<td> <input type="text" size="75" id="precio" name="precio" required></td>
+					</tr>
+					<tr>
+						<td>Oferta:</td>
+						<td> <input type="text" size="5" id="oferta" name="oferta" required>%</td>
 					</tr>
 					<tr>
 						<td>Stock:</td>
-						<td> <input type="text" size="75" id="stock" name="stock"></td>
+						<td> <input type="text" size="75" id="stock" name="stock" required></td>
 					</tr>
 					<tr>
 						<td>Imagen:</td>
@@ -47,6 +48,7 @@ include '../php/Menu.php';
 					</tr>
 				</table>
 			</form>
+			<span id="error" name="error" style="margin:auto; display:table; color:red;"></span><br><br>
 
 		</div>
 
@@ -56,6 +58,7 @@ include '../php/Menu.php';
 			$genero = $_REQUEST['genero'];
 			$nombre = $_REQUEST['nombreProducto'];
 			$precio = $_REQUEST['precio'];
+			$oferta = $_REQUEST['oferta'];
 			$stock = $_REQUEST['stock'];
 
 			$imagen = "";
@@ -78,6 +81,8 @@ include '../php/Menu.php';
 			$producto->addChild('precio', $precio);
 			$producto->addChild('stock', $stock);
 			$producto->addChild('fecha', date('Y-m-d'));
+			$producto->addChild('oferta', $oferta);
+
 			if ($imagen != "") {
 				$producto->addChild('imagen', $imagen_b64);
 			}
@@ -87,6 +92,6 @@ include '../php/Menu.php';
 		?>
 	</section>
 	<?php include '../html/Footer.html'; ?>
-</body>
+
 
 </html>

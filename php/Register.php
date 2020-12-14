@@ -11,36 +11,37 @@ include '../php/Menu.php';
 
 
 <section>
-    <div id="formDiv">
+    <div id="formDiv" style="text-align: center;">
         <?php if (isset($_SESSION['email']))
             die('Ya estas logeado'); ?>
         <form id='register' name='fregister' enctype="multipart/form-data" action='Register.php' method="POST">
-            <table id="tform" style="margin: auto; height: 70%">
+            <table class="tform">
                 <tr>
-                    <td align="left"><label id="lemail">Email*: </label></td>
+                    <td><label id="lemail">Email*: </label></td>
                     <td><input type="text" id="email" name="email" required></td>
                 </tr>
                 <tr>
-                    <td align="left"><label id="lname">Nombre y Apellidos*: </label></td>
+                    <td><label id="lname">Nombre y Apellidos*: </label></td>
                     <td><input type="text" id="name" name="name" required></td>
                 </tr>
                 <tr>
-                    <td align="left"><label id="lpassword">Contraseña*: </label></td>
+                    <td><label id="lpassword">Contraseña*: </label></td>
                     <td><input type="password" id="password" name="password" required></td>
                 </tr>
                 <tr>
-                    <td align="left"><label id="lpassword2">Repetir Contraseña*: </label></td>
+                    <td><label id="lpassword2">Repetir Contraseña*: </label></td>
                     <td><input type="password" id="password2" name="password2" required></td>
                 </tr>
                 <tr>
-                    <td align="left"><label id="lfile">Avatar: </label></td>
+                    <td><label id="lfile">Avatar: </label></td>
                     <td><input type="file" id="archivosubido" name="archivosubido" accept="image/*" onchange="preview()"></td>
                 </tr>
             </table>
-            <label>* Campo obligatorio </label>
+
             <br>
-            <input type="reset" value="Limpiar">
-            <input type="submit"><br>
+            <input type="reset" class="boton" value="Limpiar">
+            <input type="submit" class="boton"><br><br>
+            <label>* Campo obligatorio </label>
         </form>
         <?php
         include 'DbConfig.php';

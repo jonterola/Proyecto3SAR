@@ -8,11 +8,12 @@ include '../html/Header.html';
 include '../php/Menu.php';
 ?>
 
+<body>
     <section id="s1">
         <div>
 
             <form id='fproduct' name='fproduct' method="POST" enctype='multipart/form-data' action=''>
-                <h2>Eliminar producto</h2><br />
+                <h2>Añadir oferta</h2><br />
                 <table>
 
                     <tr>
@@ -20,10 +21,15 @@ include '../php/Menu.php';
                         <td> <input type="text" size="50" id="codigo" name="codigo" required></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" id="submit" value="Eliminar"> <input type="reset" id="reset" value="Limpiar"></td>
+                        <td>Descuento:</td>
+                        <td> <input type="text" size="5" id="oferta" name="oferta" pattern="[0-9]{1,2}" title="El descuento debe ser un valor entre 0 y 99" required>%</td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" id="submit" value="Añadir oferta"> <input type="reset" id="reset" value="Limpiar"></td>
                     </tr>
                 </table>
             </form>
+            
         </div>
 
 
@@ -36,20 +42,15 @@ include '../php/Menu.php';
 
             foreach ($xml->producto as $producto) {
                 if ($producto['id'] == $_REQUEST['codigo']) {
-                    unset($xml->producto[$cont]);
-                    if ($_REQUEST['codigo'] == $xml['lastid'] &&  sizeof($xml->xpath("/productos/producto[last()]")) != 0) {
-                        $xml['lastid'] = ($xml->xpath("/productos/producto[last()]"))[0]['id'];
-                    } else if (sizeof($xml->xpath("/productos/producto[last()]")) == 0) {
-                        $xml['lastid'] = '0';
-                    }
-                    echo "<span style='margin:auto; display:table;'>Producto eliminado correctamente.</span>";
+                    $producto->oferta = $_REQUEST['oferta'];
+                    echo "<span id='mensajeOferta' style='margin:auto; display:table;'>Oferta añadida correctamente.</span>";
                     $encontrado = true;
                     break;
                 }
                 $cont++;
             }
             if ($encontrado == false)
-                echo "<span style='margin:auto; display:table;'>No se ha encontrado ningún producto con ese código.</span>";
+                echo "<span id='mensajeOferta' style='margin:auto; display:table;'>No se ha encontrado ningún producto con ese código.</span>";
 
             $xml->asXML('../xml/productos.xml');
         }
