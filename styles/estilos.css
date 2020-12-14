@@ -46,6 +46,8 @@ nav {
   background: #444;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
+  display: flex;
+  align-items: center;
 }
 
 .nav__span {
@@ -76,9 +78,14 @@ nav {
   -o-border-radius: 3px;
   border-radius: 3px;
   float: right !important;
+  line-height: 34px;
 }
 
 .nav__spanleft:hover,
+.nav__spanright:hover {
+  background-color: #ccc;
+  text-decoration: underline;
+}
 .nav__spanright:hover {
   background-color: #ccc;
   text-decoration: underline;
