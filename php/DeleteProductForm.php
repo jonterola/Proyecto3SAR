@@ -3,14 +3,11 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-</head>
 <?php
 include '../html/Header.html';
 include '../php/Menu.php';
 ?>
 
-<body>
     <section id="s1">
         <div>
 
@@ -59,6 +56,6 @@ include '../php/Menu.php';
         ?>
     </section>
     <?php include '../html/Footer.html'; ?>
-</body>
+
 
 </html>

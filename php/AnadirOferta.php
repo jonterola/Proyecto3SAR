@@ -3,8 +3,6 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-</head>
 <?php
 include '../html/Header.html';
 include '../php/Menu.php';
@@ -24,13 +22,14 @@ include '../php/Menu.php';
                     </tr>
                     <tr>
                         <td>Descuento:</td>
-                        <td> <input type="text" size="5" id="oferta" name="oferta" required>%</td>
+                        <td> <input type="text" size="5" id="oferta" name="oferta" pattern="[0-9]{1,2}" title="El descuento debe ser un valor entre 0 y 99" required>%</td>
                     </tr>
                     <tr>
                         <td><input type="submit" id="submit" value="Añadir oferta"> <input type="reset" id="reset" value="Limpiar"></td>
                     </tr>
                 </table>
             </form>
+            <span style="margin:auto; display:table; color:red;" id="error"></span>
         </div>
 
 
@@ -44,20 +43,20 @@ include '../php/Menu.php';
             foreach ($xml->producto as $producto) {
                 if ($producto['id'] == $_REQUEST['codigo']) {
                     $producto->oferta = $_REQUEST['oferta'];
-                    echo "<span style='margin:auto; display:table;'>Oferta añadida correctamente.</span>";
+                    echo "<span id='mensajeOferta' style='margin:auto; display:table;'>Oferta añadida correctamente.</span>";
                     $encontrado = true;
                     break;
                 }
                 $cont++;
             }
             if ($encontrado == false)
-                echo "<span style='margin:auto; display:table;'>No se ha encontrado ningún producto con ese código.</span>";
+                echo "<span id='mensajeOferta' style='margin:auto; display:table;'>No se ha encontrado ningún producto con ese código.</span>";
 
             $xml->asXML('../xml/productos.xml');
         }
         ?>
     </section>
     <?php include '../html/Footer.html'; ?>
-</body>
+
 
 </html>
