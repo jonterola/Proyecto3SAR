@@ -19,7 +19,7 @@
         echo $foto;
         echo '" style="float:left;max-width:60px;width:100%;max-height:60px;height:100%"></img> ';
 
-        echo "<a href='#' onClick='________();'><img  style= 'width:7.6%;float:right;padding-right:12px'  src ='../uploads/vercarrito.png' /></a>";
+        echo "<a href='Cesta.php'><img  style= 'width:7.6%;float:right;padding-right:12px'  src ='../uploads/vercarrito.png' /></a>";
 
         if ($_SESSION['tipo'] == 'A') {
             echo '<span class = "nav__spanleft"><a href="AddProductForm.php">Añadir Producto</a></span>';
