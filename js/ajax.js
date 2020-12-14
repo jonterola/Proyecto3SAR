@@ -1,16 +1,25 @@
-function showAll(i) {
-    $idnt = i;
+function add(i) {
     $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "ShowAllAjax.php",
-        data: { id: i },
+        type: "GET",
+        url: "Cesta.php",
+        data: { add: i },
         success: function (response) {
-            var newData = JSON.stringify(response)
-            var data = JSON.parse(newData);
-            $div = '#text' + i;
-            $($div).html(data.text);
+            if (response == "OK") alert("El producto se ha añadido correctamente.")
+            else alert(response);
         }
     });
 
 }
+
+function showCart() {
+    $.ajax({
+        type: "GET",
+        url: "mostrarCesta.php",
+        success: function (response) {
+            $("#show").html(response);
+        }
+    });
+}
+setInterval(function () {
+    showCart();
+}, 5000);

@@ -34,7 +34,7 @@ include '../php/Menu.php';
                 } else {
                     echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span >$precio €</span> ";
                 }
-                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
+                echo "<a href='#' onClick='add(" . $producto['id'] . ")'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
             }
         }
     } else if (isset($_REQUEST['novedad'])) {
@@ -52,7 +52,7 @@ include '../php/Menu.php';
                 } else {
                     echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>   ";
                 }
-                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
+                echo "<a href='#' onClick='add(" . $producto['id'] . ")'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
             }
         }
     } else if (isset($_REQUEST['oferta'])) {
@@ -70,7 +70,7 @@ include '../php/Menu.php';
                 } else {
                     echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span>  ";
                 }
-                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
+                echo "<a href='#' onClick='add(" . $producto['id'] . ")'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
             }
         }
     } else {
@@ -86,7 +86,7 @@ include '../php/Menu.php';
                 } else {
                     echo "<td> <span style='text-decoration:line-through'>$producto->precio €</span>  <span>$precio €</span> ";
                 }
-                echo "<a href='#' onClick='________();'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
+                echo "<a href='#' onClick='add(" . $producto['id'] . ")'><img  style= 'width:10%;float:right; padding-right: 100px'  src ='../uploads/anadircarrito.png' /></a></td> </tr>";
                 $cont++;
             }
         }
